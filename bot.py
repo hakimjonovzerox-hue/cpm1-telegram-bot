@@ -174,6 +174,10 @@ app.add_handler(MessageHandler(filters.Text("🔐 Full akkount"), full_akkaunt))
 app.add_handler(MessageHandler(filters.Text("✅ Ishonchli kanallar"), ishonchli_kanallar))
 app.add_handler(MessageHandler(filters.Text("📞 Admin bilan bog‘lanish"), admin_bilan_boglanish))
 
+# deploy trigger
+
+
 print("✅ CPM 1 bot ishga tushdi...")
 app.run_polling()
+
 
