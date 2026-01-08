@@ -7,8 +7,11 @@ from telegram.ext import (
     filters
 )
 
-TOKEN = "8446176699:AAERBCaANUfPIkDw0jV7dKwvUNqLgtb5jKM"
-ADMIN_ID = 6970052867  # o'z Telegram IDing
+import os
+
+TOKEN = os.getenv("8446176699:AAERBCaANUfPIkDw0jV7dKwvUNqLgtb5jKM")
+ADMIN_ID = int(os.getenv("6970052867"))
+
 
 # ====== XOTIRA ======
 user_coin_order = {}
@@ -173,3 +176,4 @@ app.add_handler(MessageHandler(filters.Text("📞 Admin bilan bog‘lanish"), ad
 
 print("✅ CPM 1 bot ishga tushdi...")
 app.run_polling()
+
